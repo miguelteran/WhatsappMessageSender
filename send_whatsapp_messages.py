@@ -92,8 +92,8 @@ if __name__ == '__main__':
                 print('Sending message to {}...'.format(number))
                 if send_image:
                     # Need to click on upload image and upload it
-                    attachment_button = driver.find_element_by_xpath()
-                    attachment_button.click(ATTACHMENT_BUTTON_XPATH)
+                    attachment_button = driver.find_element_by_xpath(ATTACHMENT_BUTTON_XPATH)
+                    attachment_button.click()
                     time.sleep(2)
                     upload_image_button = driver.find_element_by_xpath(UPLOAD_IMAGE_BUTTON_XPATH)
                     upload_image_button.send_keys(image_path)
@@ -109,7 +109,7 @@ if __name__ == '__main__':
 
 
     # TODO: generate report and tell user where it is
-
+    time.sleep(3)
     print('')
     print('Finished sending messages.')
     print('')
